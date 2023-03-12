@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Store APP EDIT</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Edit Video Page</h1>
+
+    <form action="/thedig/<%= video.id %>?_method=PUT" method="POST">
+        Name: <input type="text" name="name" value="<%= video.name %>"> <br/>
+        Artist: <input type="text" name="artist" value="<%= video.artist %>"> <br/>
+        Genre: <input type="text" name="genre" value="<%=video.genre%>" > <br/>
+        Link: <input type="url" name="link" value="<%=video.link%>" required> <br/>
+        Continent: <input type="text" name="continent" value="<%= video.continent%>"/> <br/>
+        Year: <input type="text" name="year" value="<%= video.year%>"/> <br/>
+        
+  
+        <input type="submit" value="Submit Changes">
+        
+      </form>
+
+      <a href="/thedig">Home</a>
+  </body>
+</html>

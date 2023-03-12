@@ -1,0 +1,28 @@
+body {
+  background: rgb(63, 36, 36);
+  color: wheat;
+  text-align: center;
+  font-family: 'Gloock', serif;
+  
+
+}
+
+#infoBox {
+  color: wheat;
+}
+
+.buttonStyle{
+    text-decoration: none;
+    margin: 2px;
+}
+
+.button-container form {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+
+a{
+    color: wheat;
+}
+

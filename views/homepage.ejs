@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+    <title>The Dig Home</title>
+</head>
+
+<body>
+
+    <h1>Test</h1>
+    
+    
+        <% for(let i=0; i < video.length; i++) { %>
+            <div id="product-box">
+                <a href="/thedig/<%=video[i].id; %>">
+                    <%=video[i].name; %>
+                </a>
+                <br>
+            </div>
+            <% } %>
+
+    
+<br>
+    <a href="/thedig/new" id="addSong">Add New Song</a>
+    
+
+</body>
+
+</html>

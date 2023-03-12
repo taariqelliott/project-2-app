@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+
+
+    <title>Song Show Page</title>
+</head>
+
+<body>
+
+   
+
+    <% let videoId = ''; %>
+    <% let youtubeRegex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=|embed\/)?([a-zA-Z0-9_-]{11})/; %>
+    <% let match = video.link.match(youtubeRegex); %>
+    <% if (match) { %>
+      <% videoId = match[1]; %>
+    <% } %>
+
+    
+
+<div id="showBox">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= videoId %>"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+      
+                    
+                      <div id="infoBox">
+                        <p>
+                          Song: <%= video.name %> - <%= video.artist %>
+                        </p>
+                      
+                        <p>
+                          Info: <%= video.genre %> --- <%= video.year %> --- <%= video.continent %>
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div class="button-container">
+                        <form action="/thedig/<%=video.id%>?_method=DELETE" method="POST" id="moveMeBuy" class="button">
+                          <input type="submit" value="Delete" class="buttonStyle">
+                        </form>
+                        <form action="/thedig/<%=video.id%>/edit" method="GET" id="moveMeBuy" class="button">
+                            <input type="submit" value="Edit" class="buttonStyle">
+                          </form>
+                          
+                      </div>
+                      
+                      
+                    
+                    <a href="/thedig">Home</a>
+                    
+                      
+</div>
+              
+
+</body>
+
+</html>
