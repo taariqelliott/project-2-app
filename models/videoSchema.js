@@ -4,12 +4,13 @@ const { text } = require('body-parser')
 const mongoose = require('mongoose')
 
 const videoSchema = new mongoose.Schema({
-    name: {type: String, required: true},
+    songName: {type: String, required: true},
     artist: String,
     genre: String,
     link: String,
+    country: String,
     continent: String,
-    year: String,
+    year: Number,
      
 })
 

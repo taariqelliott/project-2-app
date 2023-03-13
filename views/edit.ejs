@@ -12,10 +12,11 @@
     <h1>Edit Video Page</h1>
 
     <form action="/thedig/<%= video.id %>?_method=PUT" method="POST">
-        Name: <input type="text" name="name" value="<%= video.name %>"> <br/>
+        Song Name: <input type="text" name="songName" value="<%= video.songName %>"> <br/>
         Artist: <input type="text" name="artist" value="<%= video.artist %>"> <br/>
         Genre: <input type="text" name="genre" value="<%=video.genre%>" > <br/>
         Link: <input type="url" name="link" value="<%=video.link%>" required> <br/>
+        Country: <input type="text" name="country" value="<%= video.country%>"/> <br/>
         Continent: <input type="text" name="continent" value="<%= video.continent%>"/> <br/>
         Year: <input type="text" name="year" value="<%= video.year%>"/> <br/>
         

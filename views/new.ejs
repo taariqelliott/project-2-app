@@ -12,19 +12,20 @@
 </head>
 
 <body>
-    <h1>Make New Product</h1>
+    <h1>Upload New Video</h1>
     <form action="/thedig" method="POST">
-        Song Name: <input type="text" name="name"> <br />
+        Song Name: <input type="text" name="songName"> <br />
         Artist: <input type="text" name="artist"> <br />
         Genre: <input type="text" name="genre"> <br />
         Link: <input type="url" name="link"> <br />
+        Country: <input type="text" name="country"> <br />
         Continent: <input type="text" name="continent"> <br />
-        Year: <input type="text" name="year"> <br />
+        Year: <input type="number" name="year"> <br />
 
-        <input type="submit" name="" value="Create Product" />
+        <input type="submit" name="" value="Add Song" />
 
-        <a href="/thedig">Home</a>
     </form>
+    <a href="/thedig">Home</a>
 </body>
 
 </html>

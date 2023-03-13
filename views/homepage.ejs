@@ -14,22 +14,19 @@
 
 <body>
 
-    <h1>Test</h1>
+    <h1 id="title">The Dig</h1>
     
     
-        <% for(let i=0; i < video.length; i++) { %>
-            <div id="product-box">
-                <a href="/thedig/<%=video[i].id; %>">
-                    <%=video[i].name; %>
-                </a>
-                <br>
-            </div>
-            <% } %>
-
-    
-<br>
+    <div id="continentLinks">
+        <a href="/thedig/africa" id="continents">Africa</a>
+    <a href="/thedig/asia" id="continents">Asia</a>
+    <a href="/thedig/australia" id="continents">Australia</a>
+    <a href="/thedig/europe" id="continents">Europe</a>
+    <a href="/thedig/northamerica" id="continents">North America</a>
+    <a href="/thedig/southamerica" id="continents">South America</a>
     <a href="/thedig/new" id="addSong">Add New Song</a>
     
+    </div>
 
 </body>
 

@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-const Video = require('../models/videotest.js');
+const Video = require('../models/videoSchema.js');
 
 // INDEX
 router.get('/', (req, res) => {
@@ -21,6 +21,80 @@ router.get('/', (req, res) => {
 router.get('/new', (req, res) => {
   res.render('new.ejs');
 });
+
+// Africa
+router.get('/africa', (req, res) => {
+  Video.find({}, (err, foundVideo) => {
+    if (err) {
+      console.log(err.message);
+    }
+    res.render('continents/africa.ejs', {
+      video: foundVideo,
+    });
+  });
+});
+
+
+// Asia
+router.get('/asia', (req, res) => {
+  Video.find({}, (err, foundVideo) => {
+    if (err) {
+      console.log(err.message);
+    }
+    res.render('continents/asia.ejs', {
+      video: foundVideo,
+    });
+  });
+});
+
+// Australia
+router.get('/australia', (req, res) => {
+  Video.find({}, (err, foundVideo) => {
+    if (err) {
+      console.log(err.message);
+    }
+    res.render('continents/australia.ejs', {
+      video: foundVideo,
+    });
+  });
+});
+
+// Europe
+router.get('/europe', (req, res) => {
+  Video.find({}, (err, foundVideo) => {
+    if (err) {
+      console.log(err.message);
+    }
+    res.render('continents/europe.ejs', {
+      video: foundVideo,
+    });
+  });
+});
+
+// North America
+router.get('/northamerica', (req, res) => {
+  Video.find({}, (err, foundVideo) => {
+    if (err) {
+      console.log(err.message);
+    }
+    res.render('continents/northamerica.ejs', {
+      video: foundVideo,
+    });
+  });
+});
+
+// South America
+router.get('/southamerica', (req, res) => {
+  Video.find({}, (err, foundVideo) => {
+    if (err) {
+      console.log(err.message);
+    }
+    res.render('continents/southamerica.ejs', {
+      video: foundVideo,
+    });
+  });
+});
+
 
 
 // DELETE
@@ -94,11 +168,21 @@ router.get('/:id/edit', (req, res) => {
 // SHOW
 router.get('/:id', (req, res) => {
   Video.findById(req.params.id, (err, foundVideo) => {
+    if (err) {
+      console.log(err.message);
+    }
     res.render('show.ejs', {
       video: foundVideo,
     });
   });
 });
+
+
+
+
+
+// routes for each continent
+
 
 
 module.exports = router;

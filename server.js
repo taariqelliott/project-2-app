@@ -4,9 +4,9 @@ const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
 require('dotenv').config();
-const VideoController = require('./controllers/video.js');
+const VideoController = require('./controllers/videoRoutes.js');
 const mongoose = require('mongoose');
-const Videos = require('./models/videotest.js');
+const Videos = require('./models/videoSchema.js');
 
 // DATABASE CONNECTION
 // Connect to Mongo
@@ -15,6 +15,7 @@ mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+
 
 // Mongo error/success
 const db = mongoose.connection;
@@ -35,3 +36,4 @@ const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log('Server is WORKING ON PORT:', PORT);
 });
+

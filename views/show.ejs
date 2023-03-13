@@ -18,29 +18,27 @@
 
    
 
-    <% let videoId = ''; %>
-    <% let youtubeRegex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=|embed\/)?([a-zA-Z0-9_-]{11})/; %>
-    <% let match = video.link.match(youtubeRegex); %>
-    <% if (match) { %>
-      <% videoId = match[1]; %>
-    <% } %>
-
     
+    <h1>
+        The DiG
+    </h1>
 
 <div id="showBox">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= videoId %>"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
+    <% let url = new URL(video.link); %>
+<% let searchParams = new URLSearchParams(url.search); %>
+<% let videoId = searchParams.get('v'); %>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/<%= videoId %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
       
-                    
                       <div id="infoBox">
                         <p>
-                          Song: <%= video.name %> - <%= video.artist %>
+                          <%= video.songName %> --- <%= video.artist %>
                         </p>
                       
                         <p>
-                          Info: <%= video.genre %> --- <%= video.year %> --- <%= video.continent %>
+                          <%= video.genre %> --- <%= video.year %> --- <%= video.country %>, <%= video.continent %>
                         </p>
                       </div>
                     </div>
