@@ -5,27 +5,32 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
 
     <title>New Video Upload</title>
 </head>
 
 <body>
     <h1>Upload New Video</h1>
-    <form action="/thedig" method="POST">
-        Song Name: <input type="text" name="songName"> <br />
-        Artist: <input type="text" name="artist"> <br />
-        Genre: <input type="text" name="genre"> <br />
-        Link: <input type="url" name="link"> <br />
-        Country: <input type="text" name="country"> <br />
-        Continent: <input type="text" name="continent"> <br />
-        Year: <input type="number" name="year"> <br />
+    <div id="new-box">
+        <form action="/thedig" method="POST">
+            Song Name: <input type="text" name="songName"> <br />
+            Artist: <input type="text" name="artist"> <br />
+            Genre: <input type="text" name="genre"> <br />
+            Link: <input type="url" name="link"> <br />
+            Country: <input type="text" name="country"> <br />
+            Continent: <input type="text" name="continent"> <br />
+            Year: <input type="number" name="year"> <br />
+            
 
-        <input type="submit" name="" value="Add Song" />
+            <input type="submit" name="" value="Add Song" id="addSong" />
 
-    </form>
-    <a href="/thedig">Home</a>
+        </form>
+    </div>
+    <div id="bottomNavContainer">
+        <a href="/thedig" id="bottomNav">Home</a>
+    </div>
 </body>
 
 </html>

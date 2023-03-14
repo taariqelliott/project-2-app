@@ -14,7 +14,7 @@
 
 <body>
 
-    <h1>North America</h1>
+    <h1 id="title">North America</h1>
 
 <%
 // Create a new variable to store the sorted list of songs
@@ -24,7 +24,7 @@ const sortedSongs = video.filter(song => song.continent.toLowerCase() === 'north
 for (let i = 0; i < sortedSongs.length; i++) {
 %>
   <div id="product-box">
-    <a href="/thedig/<%=sortedSongs[i].id%>">
+    <a href="/thedig/<%=sortedSongs[i].id%>" id="songList">
       <%=sortedSongs[i].songName%>
     </a>
     <br>
@@ -32,8 +32,10 @@ for (let i = 0; i < sortedSongs.length; i++) {
 <% } %>
 
 <br>
-<a href="/thedig" id="">Home</a>
-<a href="/thedig/new" id="addSong">Add New Song</a>
+<div id="bottomNavContainer">
+    <a href="/thedig" id="bottomNav">Home</a>
+    <a href="/thedig/new" id="bottomNav">Add New Song</a>
+</div>
 
 
 

@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
 
 
-    <title>Song Show Page</title>
+    <title><%=video.songName %> - <%=video.artist%> </title>
 </head>
 
 <body>
@@ -19,12 +19,13 @@
    
 
     
-    <h1>
+    <h1 id="title">
         The DiG
     </h1>
 
 <div id="showBox">
-    <% let url = new URL(video.link); %>
+  
+<% let url = new URL(video.link); %>
 <% let searchParams = new URLSearchParams(url.search); %>
 <% let videoId = searchParams.get('v'); %>
 
@@ -55,7 +56,12 @@
                       
                       
                     
-                    <a href="/thedig">Home</a>
+                    <div id="bottomNavContainer">
+                      <a href="/thedig" id="bottomNav">Home</a>
+                    <a href="/thedig/<%= video.continent.toLowerCase().replace(' ', '') %>" id="bottomNav">Back</a>
+                    </div>
+
+
                     
                       
 </div>

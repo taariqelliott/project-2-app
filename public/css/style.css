@@ -1,70 +1,92 @@
 body {
+  margin-top: 150px;
   background: rgb(63, 36, 36);
   color: wheat;
   text-align: center;
-  font-family: 'Gloock', serif;
-  
-
+  font-family: "Gloock", serif;
 }
 
 #infoBox {
   color: wheat;
 }
 
-.buttonStyle{
-    text-decoration: none;
-    margin: 2px;
+.buttonStyle {
+  text-decoration: none;
+  margin: 2px;
 }
 
 .button-container form {
-    display: inline-block;
-    margin-right: 10px;
-  }
-  
+  display: inline-block;
+  margin-right: 10px;
+}
 
-a{
-    color: wheat;
+a {
+  color: wheat;
+}
+
+#testtext {
+  position: relative;
+}
+
+#testbox {
+  background-color: rgb(0, 0, 0);
+  position: relative;
+  top: 50px;
+  width: 200px;
+  height: 200px;
+  left: 50%;
+  margin-left: -100px; /* Half the width of the element */
 }
 
 
-
-#testtext {
-    position: relative;
+#bottomNavContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: wheat;
+    padding-bottom: 20px;
+    padding-top: 20px;
   }
   
-  #testbox {
-    background-color: rgb(0, 0, 0);
-    position: relative;
-    top: 50px;
-    width: 200px;
-    height: 200px;
-    left: 50%;
-    margin-left: -100px; /* Half the width of the element */
-  }
-    
-  #addSong {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 2em;
-    
-  }
-
-  #continents{
-    display: block;
-    margin-top: 10px;
+  #bottomNav {
+    color: rgb(63, 36, 36);
+    margin: 0 5px; /* add some spacing between the links */
     text-decoration: none;
-    font-size: 30px;
   }
 
-  #title{
-    font-size: 50px;
+#continents {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  font-size: 30px;
+}
 
-  }
+#title {
+  font-size: 50px;
+}
 
-  #continentLinks{
-    margin-top: 6em;
-    
-    
-  }
+#continentLinks {
+  margin-top: 6em;
+}
+
+#product-box{
+    margin-top: 10px;
+}
+
+#addSong{
+    margin-top: 15px;
+}
+
+#new-box{
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+#songList{
+    margin: 0;
+    font-size: 20px;
+}
