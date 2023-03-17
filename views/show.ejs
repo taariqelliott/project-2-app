@@ -29,7 +29,7 @@
 <% let searchParams = new URLSearchParams(url.search); %>
 <% let videoId = searchParams.get('v'); %>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/<%= videoId %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="750" height="425" src="https://www.youtube.com/embed/<%= videoId %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
       
@@ -61,12 +61,38 @@
                     <a href="/thedig/<%= video.continent.toLowerCase().replace(' ', '') %>" id="bottomNav">Back</a>
                     </div>
 
-
-                    
+                    <button onclick="showDropdown()">Share</button>
+                    <div id="dropdown" style="display: none;">
+                      <input type="text" value="" id="page-url">
+                      <button onclick="copyPageUrl()">Copy URL</button>
+                    </div>
+       
                       
 </div>
+
+
               
 
 </body>
 
+<script>
+
+  // code for the dropdown that allows to share the current page
+  function showDropdown() {
+  var dropdown = document.getElementById("dropdown");
+  if (dropdown.style.display === "none") {
+    dropdown.style.display = "block";
+    document.getElementById("page-url").value = window.location.href;
+  } else {
+    dropdown.style.display = "none";
+  }
+}
+
+function copyPageUrl() {
+  var pageUrl = document.getElementById("page-url");
+  pageUrl.select();
+  document.execCommand("copy");
+}
+
+</script>
 </html>

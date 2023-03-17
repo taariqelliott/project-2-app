@@ -14,7 +14,7 @@
 
 <body>
 
-    <h1 id="title"> Asia</h1>
+    <h1 id="title">Songs From Asia</h1>
 
 <%
 // Create a new variable to store the sorted list of songs
@@ -25,7 +25,7 @@ for (let i = 0; i < sortedSongs.length; i++) {
 %>
 <div id="product-box">
     <a href="/thedig/<%=sortedSongs[i].id%>" id="songList">
-      <%=sortedSongs[i].songName%>
+      <%=sortedSongs[i].songName%> - <%=sortedSongs[i].artist%>
     </a>
     <br>
   </div>
