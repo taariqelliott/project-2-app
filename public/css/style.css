@@ -1,13 +1,13 @@
 body {
   margin-top: 50px;
-  background: rgb(63, 36, 36);
+  background: #3f2424;
   color: wheat;
   text-align: center;
   font-family: "Gloock", serif;
 }
 
 #infoBox {
-  color: wheat;
+  color: #f5deb3;
 }
 
 .buttonStyle {
@@ -39,25 +39,24 @@ a {
   margin-left: -100px; /* Half the width of the element */
 }
 
-
 #bottomNavContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: wheat;
-    padding-bottom: 20px;
-    padding-top: 20px;
-  }
-  
-  #bottomNav {
-    color: rgb(63, 36, 36);
-    margin: 0 5px; /* add some spacing between the links */
-    text-decoration: none;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: wheat;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+#bottomNav {
+  color: rgb(63, 36, 36);
+  margin: 0 5px; /* add some spacing between the links */
+  text-decoration: none;
+}
 
 #continents {
   display: block;
@@ -68,33 +67,47 @@ a {
 
 #title {
   font-size: 50px;
-  
 }
 
 #continentLinks {
   margin-top: 6em;
 }
 
-#product-box{
-    margin-top: 10px;
+#product-box {
+  margin-top: 10px;
 }
 
-#addSong{
-    margin-top: 15px;
+#addSong {
+  margin-top: 15px;
 }
 
-#new-box{
-    margin-top: 5px;
-    font-size: 20px;
+#new-box {
+  margin-top: 5px;
+  font-size: 20px;
 }
 
-#songList{
-    margin: 0;
-    font-size: 20px;
-    text-decoration: none;
+#songList {
+  margin: 0;
+  font-size: 20px;
+  text-decoration: none;
 }
-#songList:hover{
-    color: green;
-    
+#songList:hover {
+  color: green;
 }
 
+#edit-box{
+  padding-top: 50px;
+  font-size: 22px;
+  line-height: 100% ;
+}
+
+#gif-1{
+  position: absolute;
+  left: 3px;
+  width: 10%;
+}
+#gif-2{
+  position: absolute;
+  right: 3px;
+  width: 10%;
+}

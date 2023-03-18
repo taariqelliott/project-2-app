@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloock&display=swap"
+      rel="stylesheet"
+    />
 
     <title>New Video Upload</title>
-</head>
+  </head>
 
-<body>
-    <h1>Upload New Video</h1>
+  <body>
+    <a href="/thedig">
+      <h1 id="title">The DiG</h1>
+    </a>
     <div id="new-box">
-        <form action="/thedig" method="POST">
-            Song Name: <input type="text" name="songName"> <br />
-            Artist: <input type="text" name="artist"> <br />
-            Genre: <input type="text" name="genre"> <br />
-            Link: <input type="url" name="link"> <br />
-            Country: <input type="text" name="country"> <br />
-            Continent: <input type="text" name="continent"> <br />
-            Year: <input type="number" name="year"> <br />
-            
+      <form action="/thedig" method="POST">
+        Song Name: <input type="text" name="songName" /> <br />
+        Artist: <input type="text" name="artist" /> <br />
+        Genre: <input type="text" name="genre" /> <br />
+        Link: <input type="url" name="link" /> <br />
+        Country: <input type="text" name="country" /> <br />
+        Continent: <input type="text" name="continent" /> <br />
+        Year: <input type="number" name="year" /> <br />
 
-            <input type="submit" name="" value="Add Song" id="addSong" />
-
-        </form>
+        <input type="submit" name="" value="Add Song" id="addSong" />
+      </form>
     </div>
     <div id="bottomNavContainer">
-        <a href="/thedig" id="bottomNav">Home</a>
+      <a href="/thedig" id="bottomNav">Home</a>
+      <img src="https://www.animatedimages.org/data/media/102/animated-music-image-0354.gif" border="0" alt="animated-music-image-0354" id="gif-1" />
+        <img src="https://www.animatedimages.org/data/media/102/animated-music-image-0354.gif" border="0" alt="animated-music-image-0354" id="gif-2" />
     </div>
-</body>
-
+  </body>
 </html>

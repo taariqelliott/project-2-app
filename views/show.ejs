@@ -2,76 +2,82 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
 
 
-    <title><%=video.songName %> - <%=video.artist%> </title>
+  <title>
+    <%=video.songName %> - <%=video.artist%>
+  </title>
 </head>
 
 <body>
 
-   
 
-    
+
+
   <a href="/thedig">
     <h1 id="title">The DiG</h1>
-</a>
+  </a>
 
-<div id="showBox">
-  
-<% let url = new URL(video.link); %>
-<% let searchParams = new URLSearchParams(url.search); %>
-<% let videoId = searchParams.get('v'); %>
+  <div id="showBox">
 
-<iframe width="600" height="338" src="https://www.youtube.com/embed/<%= videoId %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <% let url=new URL(video.link); %>
+      <% let searchParams=new URLSearchParams(url.search); %>
+        <% let videoId=searchParams.get('v'); %>
 
-
-      
-                      <div id="infoBox">
-                        <p>
-                          <%= video.songName %> --- <%= video.artist %>
-                        </p>
-                      
-                        <p>
-                          <%= video.genre %> --- <%= video.year %> --- <%= video.country %>, <%= video.continent %>
-                        </p>
-                      </div>
-                    </div>
-                    
-                    <div class="button-container">
-                        <form action="/thedig/<%=video.id%>?_method=DELETE" method="POST" id="moveMeBuy" class="button">
-                          <input type="submit" value="Delete" class="buttonStyle">
-                        </form>
-                        <form action="/thedig/<%=video.id%>/edit" method="GET" id="moveMeBuy" class="button">
-                            <input type="submit" value="Edit" class="buttonStyle">
-                          </form>
-                          
-                      </div>
-                      
-                      
-                    
-                    <div id="bottomNavContainer">
-                      <a href="/thedig" id="bottomNav">Home</a>
-                    <a href="/thedig/<%= video.continent.toLowerCase().replace(' ', '') %>" id="bottomNav">Back</a>
-                    </div>
-
-                    <button onclick="showDropdown()">Share</button>
-                    <div id="dropdown" style="display: none;">
-                      <input type="text" value="" id="page-url">
-                      <button onclick="copyPageUrl()">Copy URL</button>
-                    </div>
-       
-                      
-</div>
+          <iframe width="600" height="338" src="https://www.youtube.com/embed/<%= videoId %>" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
 
 
-              
+
+          <div id="infoBox">
+            <p>
+              <%= video.songName %> --- <%= video.artist %>
+            </p>
+
+            <p>
+              <%= video.genre %> --- <%= video.year %> --- <%= video.country %>, <%= video.continent %>
+            </p>
+          </div>
+  </div>
+
+  <div class="button-container">
+    <form action="/thedig/<%=video.id%>?_method=DELETE" method="POST" id="moveMeBuy" class="button">
+      <input type="submit" value="Delete" class="buttonStyle">
+    </form>
+    <form action="/thedig/<%=video.id%>/edit" method="GET" id="moveMeBuy" class="button">
+      <input type="submit" value="Edit" class="buttonStyle">
+    </form>
+
+  </div>
+
+
+
+  <div id="bottomNavContainer">
+    <a href="/thedig" id="bottomNav">Home</a>
+    <a href="/thedig/<%= video.continent.toLowerCase().replace(' ', '') %>" id="bottomNav">Back</a>
+    <img src="https://www.animatedimages.org/data/media/102/animated-music-image-0354.gif" border="0" alt="animated-music-image-0354" id="gif-1" />
+        <img src="https://www.animatedimages.org/data/media/102/animated-music-image-0354.gif" border="0" alt="animated-music-image-0354" id="gif-2" />
+  </div>
+
+  <button onclick="showDropdown()">Share</button>
+  <div id="dropdown" style="display: none;">
+    <input type="text" value="" id="page-url">
+    <button onclick="copyPageUrl()">Copy URL</button>
+  </div>
+
+
+  </div>
+
+
+
 
 </body>
 
@@ -79,20 +85,21 @@
 
   // code for the dropdown that allows to share the current page
   function showDropdown() {
-  var dropdown = document.getElementById("dropdown");
-  if (dropdown.style.display === "none") {
-    dropdown.style.display = "block";
-    document.getElementById("page-url").value = window.location.href;
-  } else {
-    dropdown.style.display = "none";
+    let dropdown = document.getElementById("dropdown");
+    if (dropdown.style.display === "none") {
+      dropdown.style.display = "block";
+      document.getElementById("page-url").value = window.location.href;
+    } else {
+      dropdown.style.display = "none";
+    }
   }
-}
 
-function copyPageUrl() {
-  var pageUrl = document.getElementById("page-url");
-  pageUrl.select();
-  document.execCommand("copy");
-}
+  function copyPageUrl() {
+    let pageUrl = document.getElementById("page-url");
+    pageUrl.select();
+    document.execCommand("copy");
+  }
 
 </script>
+
 </html>

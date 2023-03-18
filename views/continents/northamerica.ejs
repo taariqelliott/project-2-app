@@ -18,9 +18,9 @@
 
 <%
 // Create a new variable to store the sorted list of songs
+// Iterate over the sorted list and display the songs in alphabetical order
 const sortedSongs = video.filter(song => song.continent.toLowerCase() === 'north america').sort((a, b) => a.songName.localeCompare(b.songName));
 
-// Iterate over the sorted list and display the songs in alphabetical order
 for (let i = 0; i < sortedSongs.length; i++) {
 %>
   <div id="product-box">
@@ -35,6 +35,8 @@ for (let i = 0; i < sortedSongs.length; i++) {
 <div id="bottomNavContainer">
     <a href="/thedig" id="bottomNav">Home</a>
     <a href="/thedig/new" id="bottomNav">Add New Song</a>
+    <img src="https://www.animatedimages.org/data/media/102/animated-music-image-0354.gif" border="0" alt="animated-music-image-0354" id="gif-1" />
+        <img src="https://www.animatedimages.org/data/media/102/animated-music-image-0354.gif" border="0" alt="animated-music-image-0354" id="gif-2" />
 </div>
 
 
