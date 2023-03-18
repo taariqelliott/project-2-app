@@ -18,6 +18,10 @@ router.get('/', (req, res) => {
 });
 
 
+// about us
+router.get('/about', (req, res) => {
+  res.render('about.ejs');
+});
 // NEW
 router.get('/new', (req, res) => {
   res.render('new.ejs');
