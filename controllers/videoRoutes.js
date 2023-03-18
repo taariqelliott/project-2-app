@@ -4,6 +4,7 @@ const router = express.Router();
 
 const Video = require('../models/videoSchema.js');
 
+
 // INDEX
 router.get('/', (req, res) => {
   Video.find({}, (err, foundVideo) => {
@@ -15,6 +16,7 @@ router.get('/', (req, res) => {
     });
   });
 });
+
 
 
 // NEW
@@ -181,7 +183,17 @@ router.get('/:id', (req, res) => {
 
 
 
-// routes for each continent
+
+
+// Video.find((err, videos) => {
+//   if (err) {
+//     console.error(err);
+//   } else {
+//     console.log(videos);
+//   }
+// });
+
+
 
 
 

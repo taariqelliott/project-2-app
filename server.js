@@ -7,6 +7,7 @@ require('dotenv').config();
 const VideoController = require('./controllers/videoRoutes.js');
 const mongoose = require('mongoose');
 const Videos = require('./models/videoSchema.js');
+const bodyParser = require('body-parser');
 
 // DATABASE CONNECTION
 // Connect to Mongo
@@ -30,6 +31,13 @@ app.use(express.static('public'));
 // this will allow us to make DELETE and PUT requests
 app.use(methodOverride('_method'));
 app.use('/thedig', VideoController);
+
+app.set('view engine', 'ejs');
+
+
+
+
+
 
 // PORT
 const PORT = process.env.PORT;
