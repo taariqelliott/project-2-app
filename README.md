@@ -1,7 +1,5 @@
 # project-2-app
 
-Testing for Github
-
 
 User Stories
 User stories detailing app functionality
