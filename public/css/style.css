@@ -57,6 +57,11 @@ a {
   margin: 0 5px; /* add some spacing between the links */
   text-decoration: none;
 }
+#bottomNav:hover {
+  color: goldenrod;
+  margin: 0 5px; /* add some spacing between the links */
+  text-decoration: none;
+}
 
 #continents {
   display: block;
@@ -64,9 +69,17 @@ a {
   text-decoration: none;
   font-size: 30px;
 }
+#continents:hover {
+  color: goldenrod;
+  font-size: 31px;
+}
 
 #title {
   font-size: 50px;
+}
+#title:hover {
+  font-size: 51px;
+  color: goldenrod;
 }
 
 #continentLinks {
@@ -81,6 +94,7 @@ a {
   margin-top: 15px;
 }
 
+
 #new-box {
   margin-top: 5px;
   font-size: 20px;
@@ -92,27 +106,33 @@ a {
   text-decoration: none;
 }
 #songList:hover {
-  color: green;
+  color: rgb(9, 181, 208);
+  font-size: 21px;
 }
 
-#edit-box{
+#edit-box {
   padding-top: 50px;
   font-size: 22px;
-  line-height: 100% ;
+  line-height: 100%;
 }
 
-#gif-1{
+#gif-1 {
   position: absolute;
   left: 3px;
   width: 10%;
 }
-#gif-2{
+#gif-2 {
   position: absolute;
   right: 3px;
   width: 10%;
 }
 
-#title-2{
+#title-2 {
   font-size: 75px;
   margin-top: 15%;
+}
+#title-2:hover {
+  font-size: 75px;
+  margin-top: 15%;
+  color: goldenrod;
 }
