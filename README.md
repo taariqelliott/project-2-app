@@ -57,8 +57,12 @@ Multer Integration
 Search Integration
 
 ### Things To Change & Add
-Ability to add images and music files 
+Ability to add images and music files
+
 Custom music player
+
 User Registration
+
 Better Styling
+
 
